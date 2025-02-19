@@ -3,11 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import horror from './data/horror.json'
 import MyNavBar from "./components/MyNavBar";
 import MyFooter from "./components/MyFooter";
-import { Container, Row } from "react-bootstrap";
 import AllTheBooks from "./components/AllTheBooks";
 import MyAllert from "./components/MyAllert";
 import fantasyBokks from "./data/fantasy.json";
-
 
 function App() {
   return (
@@ -19,14 +17,7 @@ function App() {
         <div className="m-5">
           <MyAllert />
         </div>
-        <Container>
-          <Row
-            className="my-3 row-cols-1 row-cols-md-3 row-cols-lg-4
-          g-4"
-          >
-            <AllTheBooks books={fantasyBokks} />
-          </Row>
-        </Container>
+        <AllTheBooks books={fantasyBokks} />
       </main>
       <footer>
         <MyFooter />
