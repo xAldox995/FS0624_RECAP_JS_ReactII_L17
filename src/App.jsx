@@ -6,6 +6,8 @@ import MyFooter from "./components/MyFooter";
 import { Container, Row } from "react-bootstrap";
 import AllTheBooks from "./components/AllTheBooks";
 import MyAllert from "./components/MyAllert";
+import fantasyBokks from "./data/fantasy.json";
+
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
             className="my-3 row-cols-1 row-cols-md-3 row-cols-lg-4
           g-4"
           >
-            <AllTheBooks />
+            <AllTheBooks books={fantasyBokks} />
           </Row>
         </Container>
       </main>
