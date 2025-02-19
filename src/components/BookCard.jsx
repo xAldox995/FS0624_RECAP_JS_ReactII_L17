@@ -4,21 +4,40 @@ import { Card } from "react-bootstrap";
 
 class BookCard extends Component {
   render() {
+    const cardStyle = {
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+    };
+
+    const imgStyle = {
+      width: "100%",
+      height: "200px",
+      objectFit: "cover",
+    };
+
+    const bodyStyle = {
+      height: "150px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+    };
     return (
-        <Card className="h-100 shadow-sm rounded border-0">
+        <Card style={cardStyle} className="h-100 shadow-sm rounded border-0">
         <Card.Img
+        style={imgStyle}
           variant="top"
           src={this.props.img}
           className="book-img"
         />
         
-        <Card.Body className="d-flex flex-column justify-content-between">
+        <Card.Body style={bodyStyle} className="d-flex flex-column justify-content-between">
           
           <Card.Title className="text-truncate fw-bold">{this.props.title}</Card.Title>
           
           
           <Card.Text className="small text-muted">{this.props.category}</Card.Text>
-          <strong className="text-primary">{this.props.price} €</strong>
+          <strong>{this.props.price} €</strong>
         </Card.Body>
       </Card>
     );
